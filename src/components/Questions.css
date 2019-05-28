@@ -117,3 +117,6 @@ nav.navbar,
 .jumbotron h1 {
   text-align: center;
 }
+.btnRight {
+  float: right;
+}

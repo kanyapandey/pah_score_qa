@@ -3,7 +3,7 @@ import { Link, browserHistory } from 'react-router-dom'
 import { Jumbotron, Container, Row, Col, Image, Button,InputGroup,FormControl } from 'react-bootstrap'
 import './Questions.css'
 
-export default class Questions extends Component {
+export default class Question2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ export default class Questions extends Component {
 
     }
     handleChange(){
-      this.props.history.push("/question2")
+      this.props.history.push("/question3")
     }
     toggle1() {
       this.setState({
@@ -64,7 +64,7 @@ export default class Questions extends Component {
         return(
             <Container className="container">
                 <Jumbotron>
-                    <h1>1. ลักษณะของที่พักอาศัยที่คุณอาศัยอยู่ในปัจจุบัน?</h1>
+                    <h1>2. ลักษณะของที่พักอาศัยที่คุณอาศัยอยู่ในปัจจุบัน?</h1>
                     <Row>
                         <div className="answerContainer" onClick={this.toggle1.bind(this)} style={ hidden1 }>
                             <p>บ้านเดี่ยว</p>
