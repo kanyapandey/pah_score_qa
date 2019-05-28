@@ -1,0 +1,119 @@
+body {
+  background: #141414;
+  color: #fff;
+}
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 6rem;
+}
+nav.navbar,
+.navbar-default {
+  background-color: #2892d7 !important;
+}
+.navbar-light .navbar-text {
+  color: white;
+}
+.container {
+  padding-top: 50px;
+}
+.jumbotron {
+  padding: 2rem 2rem;
+}
+.input-group > .custom-file,
+.input-group > .custom-select,
+.input-group > .form-control,
+.input-group > .form-control-plaintext {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 0;
+  width: 40px;
+  margin-bottom: 0px;
+}
+.adjustInput {
+  margin-top: 20px;
+  justify-content: center;
+}
+.lastInput {
+  width: 200px;
+  margin: 36px auto;
+}
+.submitLast {
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+.last {
+  display: block;
+  width: 30%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 30px auto;
+}
+
+.space {
+  width: 50px;
+}
+
+.bottomh2 {
+  margin-bottom: 30px;
+}
+.hiddenInput1 {
+  justify-content: center;
+  padding-top: 30px;
+}
+.hiddenInput2 {
+  padding-bottom: 46px;
+  justify-content: center;
+}
+.person-wrapper {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.cen {
+  justify-content: center;
+}
+.answerContainer {
+  width: 650px;
+  font-size: 24px;
+  margin: 12px auto;
+  padding-bottom: 5px;
+  text-align: left;
+  border: 1px solid hsla(0, 0%, 98%, 0.2);
+}
+.answerContainer p {
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: Cabin, serif;
+  font-size: 24px;
+}
+.jumbotron {
+  padding: 0rem 0rem;
+  margin-bottom: 2rem;
+  background-color: #141414;
+  border-radius: 0.3rem;
+}
+.jumbotron h1 {
+  text-align: center;
+}
