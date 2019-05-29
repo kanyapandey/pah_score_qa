@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, browserHistory } from 'react-router-dom'
-import { Jumbotron, Container, Row, Col, Image, Button,InputGroup,FormControl } from 'react-bootstrap'
+import { Jumbotron, Container, Row, Form, Col, Image, Button,InputGroup,FormControl } from 'react-bootstrap'
 import './Questions.css'
 
 export default class Questions extends Component {
@@ -64,24 +64,21 @@ export default class Questions extends Component {
         return(
             <Container className="container">
                 <Jumbotron>
-                    <h1>1. ลักษณะของที่พักอาศัยที่คุณอาศัยอยู่ในปัจจุบัน?</h1>
-                    <Row>
-                        <div className="answerContainer" onClick={this.toggle1.bind(this)} style={ hidden1 }>
-                            <p>บ้านเดี่ยว</p>
-                        </div> 
-                        <div className="answerContainer" onClick={this.toggle2.bind(this)} style={ hidden2 }>
-                            <p>ตึกแถว</p>
-                        </div> 
-                        <div className="answerContainer" onClick={this.toggle3.bind(this)} style={ hidden3 }>
-                            <p>ทาวน์โฮม</p>
-                        </div> 
-                        <div className="answerContainer" onClick={this.toggle4.bind(this)} style={ hidden4 }>
-                            <p>หอพัก</p>
-                        </div> 
-                        <div className="answerContainer" onClick={this.toggle5.bind(this)} style={ hidden5 }>
-                            <p>คอนโด</p>
-                        </div> 
-                    </Row>
+                    <h1>1. โปรดระบุ อาชีพเสริม…</h1>
+                    {/* <Row className="partTime">
+                      <Form>
+                        <Row>
+                          <Col>
+                            <Form.Control placeholder="อาชีพเสริม…" />
+                          </Col>
+                        </Row>
+                      </Form>
+                    </Row> */}
+                    <div className="partTime">
+                      <InputGroup>
+                        <FormControl as="textarea" aria-label="With textarea" />
+                      </InputGroup>
+                    </div>
                     <Row className="btnRight">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>

@@ -118,5 +118,46 @@ nav.navbar,
   text-align: center;
 }
 .btnRight {
+  margin-top: 50px;
   float: right;
+}
+.partTime {
+  margin: 60px auto;
+  justify-content: center;
+}
+.btn-group-lg > .btn,
+.btn-lg {
+  padding: 0.5rem 3rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+.input-group > .custom-file,
+.input-group > .custom-select,
+.input-group > .form-control,
+.input-group > .form-control-plaintext {
+  position: relative;
+  flex: 0.5 1;
+  /* width: 40px; */
+  margin-bottom: 0px;
+}
+.input-group {
+  justify-content: center;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: -0.625rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  /* color: #495057;
+  background-color: #fff; */
+  background: #141414;
+  color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
