@@ -117,9 +117,9 @@ nav.navbar,
 .jumbotron h1 {
   text-align: center;
 }
-.btnRight {
+.btnCenter {
   margin-top: 50px;
-  float: right;
+  justify-content: center;
 }
 .partTime {
   margin: 60px auto;

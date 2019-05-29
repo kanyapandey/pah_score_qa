@@ -58,7 +58,7 @@ export default class Question11 extends Component {
                             <p>3 ครั้ง หรือมากกว่า</p>
                         </div> 
                     </Row>
-                    <Row className="btnRight">
+                    <Row className="btnCenter">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>
                 </Jumbotron>

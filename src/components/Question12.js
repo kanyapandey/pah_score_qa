@@ -70,7 +70,7 @@ export default class Question12 extends Component {
                             <p>ทุกวัน</p>
                         </div> 
                     </Row>
-                    <Row className="btnRight">
+                    <Row className="btnCenter">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>
                 </Jumbotron>

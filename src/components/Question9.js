@@ -46,7 +46,7 @@ export default class Question9 extends Component {
                             <p>ไม่โทร = 0</p>
                         </div> 
                     </Row>
-                    <Row className="btnRight">
+                    <Row className="btnCenter">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>
                 </Jumbotron>

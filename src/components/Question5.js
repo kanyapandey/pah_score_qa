@@ -46,7 +46,7 @@ export default class Question5 extends Component {
                             <p>ไม่ใช่</p>
                         </div> 
                     </Row>
-                    <Row className="btnRight">
+                    <Row className="btnCenter">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>
                 </Jumbotron>

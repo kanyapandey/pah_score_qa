@@ -58,7 +58,7 @@ export default class Question8 extends Component {
                             <p>โทรแจ้งตำรวจ</p>
                         </div> 
                     </Row>
-                    <Row className="btnRight">
+                    <Row className="btnCenter">
                         <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
                     </Row>
                 </Jumbotron>
