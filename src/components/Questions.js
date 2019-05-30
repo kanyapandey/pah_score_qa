@@ -26,7 +26,7 @@ export default class Questions extends Component {
                       </InputGroup>
                     </div>
                     <Row className="btnCenter">
-                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
+                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>ต่อไป</Button>
                     </Row>
                 </Jumbotron>
             </Container>

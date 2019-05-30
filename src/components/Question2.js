@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, browserHistory } from 'react-router-dom'
-import { Jumbotron, Container, Row, Col, Image, Button,InputGroup,FormControl } from 'react-bootstrap'
+import { Jumbotron, Container, Row, Col, Image, Button,InputGroup,FormControl,Modal } from 'react-bootstrap'
 import './Questions.css'
 
 export default class Question2 extends Component {
@@ -15,10 +15,22 @@ export default class Question2 extends Component {
           shown5: true
         };
         this.handleChange = this.handleChange.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
 
     }
     handleChange(){
-      this.props.history.push("/question3")
+      if(!this.state.shown1 || !this.state.shown2 || !this.state.shown3 || !this.state.shown4 || !this.state.shown5){
+        this.props.history.push("/question3")
+      }else{
+        this.setState({ showModal: true });  
+      }
+    }
+    openModal(){
+      this.setState({ showModal: true });  
+    }
+    closeModal(){
+      this.setState({ showModal: false });  
     }
     toggle1() {
       this.setState({
@@ -82,8 +94,20 @@ export default class Question2 extends Component {
                             <p>คอนโด</p>
                         </div> 
                     </Row>
+                    <Modal show={this.state.showModal} onHide={this.closeModal} className="modalColor">
+                      <Modal.Header closeButton>
+                      </Modal.Header>
+                      <Modal.Body>
+                        <h4 className="text-center">Please Select 1 of them..</h4>
+
+                      </Modal.Body>
+                      <Modal.Footer>
+                          <Button onClick={this.closeModal}>ตกลง</Button>
+                      </Modal.Footer>
+                    </Modal>
+                    
                     <Row className="btnCenter">
-                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>Next</Button>
+                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>ต่อไป</Button>
                     </Row>
                 </Jumbotron>
             </Container>
