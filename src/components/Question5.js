@@ -12,64 +12,22 @@ export default class Question5 extends Component {
           shown2: true
         };
         this.handleChange = this.handleChange.bind(this);
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
     }
     handleChange(){
-      if(!this.state.shown1 || !this.state.shown2){
-        this.props.history.push("/question6")
-      }else{
-        this.setState({ showModal: true });  
-      }
-    }
-    openModal(){
-      this.setState({ showModal: true });  
-    }
-    closeModal(){
-      this.setState({ showModal: false });  
-    }
-    toggle1() {
-      this.setState({
-        shown1: !this.state.shown1
-      });
-    }
-    toggle2() {
-      this.setState({
-        shown2: !this.state.shown2
-      });
+      this.props.history.push("/question6")
     }
     render(){
-        var hidden1 = {
-            backgroundColor: this.state.shown1 ? "#141414" : "grey"
-        }
-        var hidden2 = {
-          backgroundColor: this.state.shown2 ? "#141414" : "grey"
-        }
         return(
             <Container className="container">
                 <Jumbotron>
                     <h1>5. ไม่ว่าจะอย่างไรก็ตาม ฉันยังคงโอนเงินค่าใช้จ่ายให้พ่อแม่อยู่เสมอ  </h1>
                     <Row>
-                        <div className="answerContainer" onClick={this.toggle1.bind(this)} style={ hidden1 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>ใช่</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle2.bind(this)} style={ hidden2 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>ไม่ใช่</p>
                         </div> 
-                    </Row>
-                    <Modal show={this.state.showModal} onHide={this.closeModal} className="modalColor">
-                      <Modal.Header closeButton>
-                      </Modal.Header>
-                      <Modal.Body>
-                        <h4 className="text-center">Please Select 1 of them..</h4>
-
-                      </Modal.Body>
-                      <Modal.Footer>
-                          <Button onClick={this.closeModal}>ตกลง</Button>
-                      </Modal.Footer>
-                    </Modal>
-                    <Row className="btnCenter">
-                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>ต่อไป</Button>
                     </Row>
                 </Jumbotron>
             </Container>

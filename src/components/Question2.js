@@ -13,101 +13,35 @@ export default class Question2 extends Component {
           shown3: true,
           shown4: true,
           shown5: true
+          
         };
         this.handleChange = this.handleChange.bind(this);
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-
     }
     handleChange(){
-      if(!this.state.shown1 || !this.state.shown2 || !this.state.shown3 || !this.state.shown4 || !this.state.shown5){
-        this.props.history.push("/question3")
-      }else{
-        this.setState({ showModal: true });  
-      }
+      this.props.history.push("/question3")
     }
-    openModal(){
-      this.setState({ showModal: true });  
-    }
-    closeModal(){
-      this.setState({ showModal: false });  
-    }
-    toggle1() {
-      this.setState({
-        shown1: !this.state.shown1
-      });
-    }
-    toggle2() {
-      this.setState({
-        shown2: !this.state.shown2
-      });
-    }
-    toggle3() {
-      this.setState({
-        shown3: !this.state.shown3
-      });
-    }
-    toggle4() {
-        this.setState({
-          shown4: !this.state.shown4
-        });
-    }
-    toggle5() {
-    this.setState({
-        shown5: !this.state.shown5
-    });
-    }
+    
     render(){
-        var hidden1 = {
-            backgroundColor: this.state.shown1 ? "#141414" : "grey"
-        }
-        var hidden2 = {
-          backgroundColor: this.state.shown2 ? "#141414" : "grey"
-        }
-        var hidden3 = {
-            backgroundColor: this.state.shown3 ? "#141414" : "grey"
-        }
-        var hidden4 = {
-            backgroundColor: this.state.shown4 ? "#141414" : "grey"
-        }
-        var hidden5 = {
-            backgroundColor: this.state.shown5 ? "#141414" : "grey"
-        }
         return(
             <Container className="container">
                 <Jumbotron>
                     <h1>2. ลักษณะของที่พักอาศัยที่คุณอาศัยอยู่ในปัจจุบัน?</h1>
                     <Row>
-                        <div className="answerContainer" onClick={this.toggle1.bind(this)} style={ hidden1 }>
-                            <p>บ้านเดี่ยว</p>
-                        </div> 
-                        <div className="answerContainer" onClick={this.toggle2.bind(this)} style={ hidden2 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
+                              <p>บ้านเดี่ยว</p>
+                          </div> 
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>ตึกแถว</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle3.bind(this)} style={ hidden3 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>ทาวน์โฮม</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle4.bind(this)} style={ hidden4 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>หอพัก</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle5.bind(this)} style={ hidden5 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>คอนโด</p>
                         </div> 
-                    </Row>
-                    <Modal show={this.state.showModal} onHide={this.closeModal} className="modalColor">
-                      <Modal.Header closeButton>
-                      </Modal.Header>
-                      <Modal.Body>
-                        <h4 className="text-center">Please Select 1 of them..</h4>
-
-                      </Modal.Body>
-                      <Modal.Footer>
-                          <Button onClick={this.closeModal}>ตกลง</Button>
-                      </Modal.Footer>
-                    </Modal>
-                    
-                    <Row className="btnCenter">
-                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>ต่อไป</Button>
                     </Row>
                 </Jumbotron>
             </Container>

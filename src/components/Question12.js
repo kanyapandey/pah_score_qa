@@ -14,87 +14,29 @@ export default class Question12 extends Component {
           shown4: true
         };
         this.handleChange = this.handleChange.bind(this);
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
 
     }
     handleChange(){
-      if(!this.state.shown1 || !this.state.shown2 || !this.state.shown3 || !this.state.shown4){
-        this.props.history.push("/question13")
-      }else{
-        this.setState({ showModal: true });  
-      }
-    }
-    openModal(){
-      this.setState({ showModal: true });  
-    }
-    closeModal(){
-      this.setState({ showModal: false });  
-    }
-    toggle1() {
-      this.setState({
-        shown1: !this.state.shown1
-      });
-    }
-    toggle2() {
-      this.setState({
-        shown2: !this.state.shown2
-      });
-    }
-    toggle3() {
-        this.setState({
-          shown3: !this.state.shown3
-        });
-    }
-    toggle4() {
-        this.setState({
-          shown4: !this.state.shown4
-        });
+      this.props.history.push("/question13")
     }
     render(){
-        var hidden1 = {
-            backgroundColor: this.state.shown1 ? "#141414" : "grey"
-        }
-        var hidden2 = {
-          backgroundColor: this.state.shown2 ? "#141414" : "grey"
-        }
-        var hidden3 = {
-            backgroundColor: this.state.shown3 ? "#141414" : "grey"
-        }
-        var hidden4 = {
-            backgroundColor: this.state.shown4 ? "#141414" : "grey"
-        }
         return(
             <Container className="container">
                 <Jumbotron>
                     <h1>12. ความถี่ในการดื่มแอลกอฮอล์?  </h1>
                     <Row>
-                        <div className="answerContainer" onClick={this.toggle1.bind(this)} style={ hidden1 }>
+                        <div className="answerContainer" onClick={this.handleChange}>
                             <p>ไม่ดื่ม หรือ 1-4 ครั้ง/เดือน</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle2.bind(this)} style={ hidden2 }>
+                        <div className="answerContainer" onClick={this.handleChange}>
                             <p>5-8 ครั้ง/เดือน</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle3.bind(this)} style={ hidden3 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p> >8 ครั้ง/เดือน</p>
                         </div> 
-                        <div className="answerContainer" onClick={this.toggle4.bind(this)} style={ hidden4 }>
+                        <div className="answerContainer" onClick={this.handleChange} >
                             <p>ทุกวัน</p>
                         </div> 
-                    </Row>
-                    <Modal show={this.state.showModal} onHide={this.closeModal} className="modalColor">
-                      <Modal.Header closeButton>
-                      </Modal.Header>
-                      <Modal.Body>
-                        <h4 className="text-center">Please Select 1 of them..</h4>
-
-                      </Modal.Body>
-                      <Modal.Footer>
-                          <Button onClick={this.closeModal}>ตกลง</Button>
-                      </Modal.Footer>
-                    </Modal>
-                    <Row className="btnCenter">
-                        <Button  className="btn" variant="success" size="lg" onClick={this.handleChange}>ต่อไป</Button>
                     </Row>
                 </Jumbotron>
             </Container>
